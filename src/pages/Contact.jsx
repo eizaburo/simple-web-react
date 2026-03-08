@@ -1,15 +1,30 @@
 import styles from './Contact.module.css';
 
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
 function Contact() {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({ mode: "onChange" });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [buttonText, setButtonText] = useState("問合せる");
 
     const _onSubmit = async (data) => {
-        
+
+        //送信開始
+        setIsSubmitting(true); //ボタンdisable
+        setButtonText("送信中...");
+
+        //ダミーウエイト（ボタンの変化を見るために挿入）
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
         // バリデーションがOKだったときの処理（バリデーション無しなら、そのまま実行）
         alert(`title=${data.title}, email=${data.email}, message=${data.message}`);
+
+        //送信完了
+        reset();
+        setButtonText("問合せる");
+        setIsSubmitting(false);
     };
 
     return (
@@ -46,7 +61,7 @@ function Contact() {
                     })}></textarea>
                     {errors.message && <p className={styles.errorMessage}>{errors.message.message}</p>}
 
-                    <button type='buttton' id='button'>問合せる</button>
+                    <button type='buttton' id='button' disabled={isSubmitting}>{buttonText}</button>
 
                 </form>
             </section>
