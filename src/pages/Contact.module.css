@@ -1,0 +1,39 @@
+.hero {
+    background-color: #aaa;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.hero p {
+    color: #fff;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 40px auto;
+    gap: 10px;
+}
+
+.contactForm input, .contactForm textarea{
+    padding: 6px;
+}
+
+.contactForm button{
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.errorMessage{
+    font-size: 0.8rem;
+    color: #f00;
+}
