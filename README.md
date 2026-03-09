@@ -7,6 +7,8 @@ Simple WebをReactと実装したもの。
 - main
   - ブランチボタンを押しても外部連携はしない。
   - 値を取得してalertで表示するだけ
+- extension/hero-component
+  - ヒーローエリアをコンポーネント化
 
 # 利用方法
 
