@@ -3,6 +3,8 @@ import styles from './Contact.module.css';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
+import Hero from '../components/Hero';
+
 function Contact() {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({ mode: "onChange" });
@@ -29,10 +31,15 @@ function Contact() {
 
     return (
         <main>
-            <section className={styles.hero}>
+            {/* <section className={styles.hero}>
                 <h1>お問合せフォーム</h1>
                 <p>お気軽にお問合せ下さい</p>
-            </section>
+            </section> */}
+            <Hero
+                height='120px'
+                headline='お問合せフォーム'
+                catchcopy='お気軽にお問合せ下さい'
+            />
             <section>
                 <form className={styles.contactForm} onSubmit={handleSubmit(_onSubmit)}>
                     <label htmlFor='title'>お問合せタイトル</label>

@@ -5,10 +5,10 @@ import Hero from '../components/Hero';
 function Home() {
     return (
         <main>
-            <section className={styles.hero}>
+            {/* <section className={styles.hero}>
                 <h1>ヒーローエリア</h1>
                 <p>ヒーローエリアのキャッチコピー</p>
-            </section>
+            </section> */}
             <Hero/>
             <section className={styles.services}>
                 <div className={styles.service}>
