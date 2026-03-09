@@ -1,5 +1,7 @@
 import styles from './Home.module.css';
 
+import Hero from '../components/Hero';
+
 function Home() {
     return (
         <main>
@@ -7,6 +9,7 @@ function Home() {
                 <h1>ヒーローエリア</h1>
                 <p>ヒーローエリアのキャッチコピー</p>
             </section>
+            <Hero/>
             <section className={styles.services}>
                 <div className={styles.service}>
                     <h2>サービスA</h2>
