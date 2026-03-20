@@ -19,9 +19,34 @@ function Contact() {
         setButtonText("送信中・・・")
 
         // sleep
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // await new Promise(resolve => setTimeout(resolve, 2000));
 
-        alert(`title=${data.title}, email=${data.email}, message=${data.message}`);
+        // alert(`title=${data.title}, email=${data.email}, message=${data.message}`);
+
+        // APIのURL
+        const api_url = "http://localhost:3000/contacts";
+
+        try {
+
+            const result = await fetch(api_url, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    title: data.title,
+                    email: data.email,
+                    message: data.message
+                })
+            });
+
+            const json = await result.json();
+            alert(json.message);
+
+        } catch (error) {
+            alert(error.message);
+        }
+
         reset();
 
         // 状態戻し
