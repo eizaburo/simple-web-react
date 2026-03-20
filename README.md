@@ -1,6 +1,6 @@
 # simple-web-react
 
-Simple WebをReactと実装したもの。
+Simple WebをReactで実装したもの。
 
 # ブランチ情報
 
