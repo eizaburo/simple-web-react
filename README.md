@@ -9,6 +9,8 @@ Simple WebをReactと実装したもの。
   - 値を取得してalertで表示するだけ
 - spike/hero-component
   - ヒーローエリアをコンポーネント化
+- spike/api-json
+  - application/jsonを受け付けるAPI（simple-api-express）との連携
 
 # 利用方法
 
