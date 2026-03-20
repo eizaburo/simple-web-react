@@ -56,7 +56,7 @@ function Contact() {
                     })} />
                     {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
 
-                    <label htmlFor='title'>お問合せ内容</label>
+                    <label htmlFor='message'>お問合せ内容</label>
                     <textarea id='message' rows={5} {...register("message", {
                         required: "お問合せ内容は必須です。",
                         maxLength: {
